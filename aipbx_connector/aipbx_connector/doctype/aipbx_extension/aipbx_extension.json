@@ -1,0 +1,60 @@
+{
+ "doctype": "DocType",
+ "name": "AiPBX Extension",
+ "module": "AiPBX Connector",
+ "custom": 0,
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "field_order": [
+  "extension",
+  "extension_name",
+  "user"
+ ],
+ "creation": "2026-11-20 12:00:00.000000",
+ "modified": "2026-11-20 12:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "states": [],
+ "autoname": "field:extension",
+ "naming_rule": "By fieldname",
+ "fields": [
+  {
+   "fieldname": "extension",
+   "fieldtype": "Data",
+   "label": "Extension",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "extension_name",
+   "fieldtype": "Data",
+   "label": "Name on the PBX",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "ERPNext user",
+   "options": "User",
+   "in_list_view": 1,
+   "description": "The user who gets the caller pop-up and places calls from this extension."
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "All",
+   "read": 1
+  }
+ ]
+}

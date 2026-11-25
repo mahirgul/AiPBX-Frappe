@@ -1,0 +1,114 @@
+{
+ "doctype": "DocType",
+ "name": "AiPBX Settings",
+ "module": "AiPBX Connector",
+ "custom": 0,
+ "engine": "InnoDB",
+ "editable_grid": 1,
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "field_order": [
+  "enabled",
+  "status_section",
+  "pbx_url",
+  "connection_uuid",
+  "instance_id",
+  "api_token",
+  "webhook_secret",
+  "last_event_at",
+  "options_section",
+  "missed_call_user",
+  "push_contacts",
+  "contacts_synced_at"
+ ],
+ "creation": "2026-11-20 12:00:00.000000",
+ "modified": "2026-11-20 12:00:00.000000",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "states": [],
+ "issingle": 1,
+ "fields": [
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Connection"
+  },
+  {
+   "fieldname": "pbx_url",
+   "fieldtype": "Data",
+   "label": "PBX address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "connection_uuid",
+   "fieldtype": "Data",
+   "label": "Connection ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "instance_id",
+   "fieldtype": "Data",
+   "label": "PBX instance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "api_token",
+   "fieldtype": "Password",
+   "label": "API token",
+   "read_only": 1
+  },
+  {
+   "fieldname": "webhook_secret",
+   "fieldtype": "Password",
+   "label": "Webhook secret",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_event_at",
+   "fieldtype": "Datetime",
+   "label": "Last event",
+   "read_only": 1
+  },
+  {
+   "fieldname": "options_section",
+   "fieldtype": "Section Break",
+   "label": "Options"
+  },
+  {
+   "fieldname": "missed_call_user",
+   "fieldtype": "Link",
+   "label": "Missed calls go to",
+   "options": "User",
+   "description": "A missed call leaves a 'call back' ToDo for the users whose phones rang; with nobody, for this user."
+  },
+  {
+   "fieldname": "push_contacts",
+   "fieldtype": "Check",
+   "label": "Send Contacts and Leads to the PBX address book",
+   "default": "1",
+   "description": "Every 5 minutes; desk phones then show the caller's name."
+  },
+  {
+   "fieldname": "contacts_synced_at",
+   "fieldtype": "Datetime",
+   "label": "Contacts sent until",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ]
+}
